@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/serversetting" >
+    <EditTextPreference 
+        android:maxLines="1" 
+        android:singleLine="true"
+         android:selectAllOnFocus="true" 
+         android:capitalize="words" 
+         android:title="@string/serveraddress" 
+         android:key="key_server_address" 
+         android:summary="@string/serveraddressdescribe" 
+         android:defaultValue="42.96.205.175" 
+         android:inputType="textCapWords" 
+     />
+    <EditTextPreference 
+        android:maxLines="1" 
+        android:singleLine="true"
+         android:selectAllOnFocus="true" 
+         android:capitalize="words" 
+         android:title="@string/serverport" 
+         android:key="key_server_port" 
+         android:summary="@string/serverportdescribe" 
+         android:defaultValue="554" 
+         android:inputType="number" 
+      />
+    <EditTextPreference 
+        android:maxLines="1" 
+        android:singleLine="true" 
+        android:selectAllOnFocus="true" 
+        android:capitalize="words" 
+        android:title="@string/machineID" 
+        android:key="key_device_id" 
+        android:summary="@string/machineIDdescribe" 
+       
+        android:inputType="textCapWords" 
+        
+      />
+   
+    <ListPreference 
+        android:entries="@array/pref_transport_list_titles" 
+        android:title="@string/transmittalmode" 
+        android:key="key_transport_mode" 
+        android:defaultValue="0" 
+        android:summary="@string/transmittalmodedescribe"
+     
+        android:entryValues="@array/pref_transport_list_values" />
+    </PreferenceCategory>  
+    
+    
+     <PreferenceCategory android:title="@string/settings3" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="key_stream_audio"
+            android:summary="@string/settings4"
+            android:title="@string/settings3" />
+
+        <ListPreference
+            android:entries="@array/audioEncoderArray"
+            android:entryValues="@array/audioEncoderValues"
+            android:key="key_audio_encoder"
+            android:defaultValue="5"
+            android:summary="@string/settings6"
+            android:title="@string/settings5" />
+    </PreferenceCategory>
+    
+     
+    <PreferenceCategory android:title="@string/settings7">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="key_stream_video"
+            android:summary="@string/settings8"
+            android:title="@string/settings7" />
+
+        <ListPreference
+            android:entries="@array/videoEncoderArray"
+            android:entryValues="@array/videoEncoderValues"
+            android:defaultValue="1"
+            android:key="key_video_encoder"
+            android:summary="@string/settings10"
+            android:title="@string/settings9" />
+           <!-- 
+            android:entries="@array/videoResolutionArray"
+            android:entryValues="@array/videoResolutionArrayValues"
+            -->
+        <ListPreference
+         
+            android:summary="@string/resolutiondescribe"
+            android:defaultValue="3"
+            android:key="key_video_resolution"
+            android:entryValues="@array/videoResolutionArrayValues"
+            android:entries="@array/videoResolutionArray"
+            android:title="@string/settings11" />
+        <ListPreference
+            android:entries="@array/videoFramerateArray"
+            android:entryValues="@array/videoFramerateValues"
+            android:summary="@string/frameratedescribe"
+            android:defaultValue="15"
+            android:key="key_video_framerate"
+            android:title="@string/settings12" />
+        <ListPreference
+            android:entries="@array/videoBitrateArray"
+            android:entryValues="@array/videoBitrateValues"
+            android:summary="@string/bitratedescribe"
+            android:defaultValue="500"
+            android:key="key_video_bitrate"
+            android:title="@string/settings13" />
+    </PreferenceCategory>
+    
+    
+    <PreferenceCategory android:title="@string/settings14" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="key_notification_enabled"
+            android:summary="@string/settings16"
+            android:title="@string/settings15" />
+    </PreferenceCategory>
+    
+    
+   
+    <Preference 
+        android:title="@string/version" 
+        android:key="key_about" 
+        />
+    
+</PreferenceScreen>
